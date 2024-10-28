@@ -1,10 +1,15 @@
-from . import main
+import os
 
+from . import main
 import inspect
 
 
 from kubiya_sdk.tools.models import Tool, Arg, FileSpec
 from kubiya_sdk.tools.registry import tool_registry
+
+def _get_requirements_content() -> str:
+    with open(os.path.join(os.path.dirname(__file__), '../../requirements.txt'), 'r') as f:
+        return f.read()
 
 hello_tool = Tool(
     name="say_hello",
@@ -30,7 +35,7 @@ python /tmp/main.py "{{ .name }}"
         ),
         FileSpec(
             destination="/tmp/requirements.txt",
-            content="",  # Add any requirements here
+            content=_get_requirements_content(),
         ),
     ],
 )
