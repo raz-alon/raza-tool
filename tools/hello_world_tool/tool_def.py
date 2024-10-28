@@ -12,7 +12,7 @@ def _get_requirements_content() -> str:
         return f.read()
 
 hello_tool = Tool(
-    name="say_hello",
+    name="say_hello2",
     type="docker",
     image="python:3.12",
     description="Prints hello {name}!",
