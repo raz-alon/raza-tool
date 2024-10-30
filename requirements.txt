@@ -7,7 +7,6 @@ fastapi==0.115.4
 h11==0.14.0
 idna==3.10
 jmespath==1.0.1
-kubiya-sdk==0.1.8
 markdown-it-py==3.0.0
 mdurl==0.1.2
 nats-py==2.9.0

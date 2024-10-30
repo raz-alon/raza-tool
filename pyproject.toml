@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "raza-tool"
+version = "0.1.0"
+description = ""
+authors = ["raz-alon <raz.alon@kubiya.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kubiya-sdk = {path = "../sdk-py", develop = true, extras = ["server"]}
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
