@@ -122,6 +122,20 @@ tools:
         description: 'the number to sleep'
         required: true
 
+  - name: python-print-sheesh
+    description: "This tool prints 'shhhesss' multiple times"
+    alias: "shhhesss"
+    type: python
+    type: python
+    content: |
+      for _ in range({{ .count }}):
+          print("shhhesss", flush=True)
+  
+    args:
+      - name: count
+        description: 'the number of times to print shhhesss'
+        required: true
+
 #   - name: print-bash
 #     description: "This tool uses bash to print x number of events"
 #     alias: "listenv"
