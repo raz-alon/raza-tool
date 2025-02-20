@@ -88,14 +88,14 @@ tools:
 #       - source: $HOME/bla.txt
 #         destination: /tmp/bla.txt
 
-  - name: list-env
-    description: "This tool lists all the env vars"
-    alias: "listenv"
-    image: "alpine:3.20"
-    content: |
-      env
-    secrets:
-      - "TOP_SECRET"
+  # - name: list-env
+  #   description: "This tool lists all the env vars"
+  #   alias: "listenv"
+  #   image: "alpine:3.20"
+  #   content: |
+  #     env
+  #   secrets:
+  #     - "TOP_SECRET"
       # - "GH_TOKEN"
 #     #   - "TEST1"
 #     #   - "TEST2"
@@ -108,33 +108,33 @@ tools:
 #       - "GH_TOKEN"
 #       - "SLACK_API_TOKEN"
 
-  - name: python-timeout-sleep
-    description: "This tool test timeout events"
-    alias: "timeout"
-    type: python
-    content: |
-      import time
-      time.sleep({{ .sleep_in_sec }})
-      print("bla", flush=True)
+  # - name: python-timeout-sleep
+  #   description: "This tool test timeout events"
+  #   alias: "timeout"
+  #   type: python
+  #   content: |
+  #     import time
+  #     time.sleep({{ .sleep_in_sec }})
+  #     print("bla", flush=True)
 
-    args:
-      - name: sleep_in_sec
-        description: 'the number to sleep'
-        required: true
+  #   args:
+  #     - name: sleep_in_sec
+  #       description: 'the number to sleep'
+  #       required: true
 
-  - name: python-print-sheesh
-    description: "This tool prints 'shhhesss' multiple times"
-    alias: "shhhesss"
-    type: python
-    type: python
-    content: |
-      for _ in range({{ .count }}):
-          print("shhhesss", flush=True)
+  # - name: python-print-sheesh
+  #   description: "This tool prints 'shhhesss' multiple times"
+  #   alias: "shhhesss"
+  #   type: python
+  #   type: python
+  #   content: |
+  #     for _ in range({{ .count }}):
+  #         print("shhhesss", flush=True)
   
-    args:
-      - name: count
-        description: 'the number of times to print shhhesss'
-        required: true
+  #   args:
+  #     - name: count
+  #       description: 'the number of times to print shhhesss'
+  #       required: true
 
   - name: error-tool
     description: "This tool through an error"
