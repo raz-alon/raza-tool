@@ -136,6 +136,13 @@ tools:
         description: 'the number of times to print shhhesss'
         required: true
 
+  - name: error-tool
+    description: "This tool through an error"
+    alias: "error tool"
+    type: python
+    content: |
+     raise ValueError("!!!Error!!!")
+        
 #   - name: print-bash
 #     description: "This tool uses bash to print x number of events"
 #     alias: "listenv"
