@@ -141,7 +141,8 @@ tools:
     alias: "error tool"
     type: python
     content: |
-     raise ValueError("!!!Error!!!")
+     import sys
+     sys.exit("This is an error message")
         
 #   - name: print-bash
 #     description: "This tool uses bash to print x number of events"
