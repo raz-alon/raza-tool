@@ -139,10 +139,10 @@ tools:
   - name: error-tool
     description: "This tool through an error"
     alias: "error tool"
-    type: python
+    type: alpine
     content: |
-     import sys
-     sys.exit("This is an error message")
+     echo "This is an error message" >&2
+     exit 1
         
 #   - name: print-bash
 #     description: "This tool uses bash to print x number of events"
