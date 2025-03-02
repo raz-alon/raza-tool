@@ -143,7 +143,21 @@ tools:
     content: |
      echo "This is an error message" >&2
      exit 1
-        
+  - name: two-args
+    description: "This tool is just tesst tool for two args"
+    alias: "twoargs"
+    type: alpine
+    args:
+      - name: x
+        description: 'x'
+        required: true
+      - name: y
+        description: 'y'
+        required: true
+    content: |
+     echo "This is a test for two args" >&2
+     exit 1
+     
 #   - name: print-bash
 #     description: "This tool uses bash to print x number of events"
 #     alias: "listenv"
